@@ -17,10 +17,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                dockerfile {
-                    filename 'Dockerfile'
-                    label 'homepage'
-                    additionalBuildArgs  '--build-arg version=1'
+                agent {
+                    dockerfile {
+                        filename 'Dockerfile'
+                        label 'homepage'
+                        additionalBuildArgs  '--build-arg version=1'
+                    }
                 }
             }
         }
