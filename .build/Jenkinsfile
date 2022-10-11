@@ -16,11 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             agent {
-                dockerfile {
-                    filename 'Dockerfile'
-                    label 'homepage'
-                    additionalBuildArgs  '--build-arg version=1'
-                }
+                dockerfile true
             }
             steps {
                 echo 'Deploying....'
