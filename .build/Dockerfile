@@ -1,4 +1,4 @@
 FROM node:16.17.1 
 COPY . .
-RUN npm install --omit=dev
+RUN npm install
 CMD [ "npm", "run dev" ]
