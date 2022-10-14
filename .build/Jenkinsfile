@@ -6,6 +6,13 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'npm install'       
+                input {
+                    message "What is this release number?"
+                    ok "Submit"
+                    parameters {
+                        string(defaultValue: ${env.BUILD_ID}, name: 'RELEASE_NUMBER', trim: true)
+                    }
+                }
             }
         }
         stage('Test') {
@@ -17,7 +24,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Building Docker image....'
-                sh "docker build -t homepage:${env.BUILD_ID} ."
+                sh "docker build -t homepage:$RELEASE_NUMBER ."
             }
         }
     }
