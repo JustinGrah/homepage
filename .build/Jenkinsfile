@@ -3,16 +3,17 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
-                echo 'Building..'
-                sh 'npm install'       
-                input {
-                    message "What is this release number?"
-                    ok "Submit"
-                    parameters {
-                        string(defaultValue: $env.BUILD_ID, name: 'RELEASE_NUMBER', trim: true)
-                    }
+            input {
+                message "What is this release number?"
+                ok "Submit"
+                parameters {
+                    string(defaultValue: $env.BUILD_ID, name: 'RELEASE_NUMBER', trim: true)
                 }
+            }
+            
+            steps {
+                echo 'Building..'       
+                sh 'npm install'
             }
         }
         stage('Test') {
