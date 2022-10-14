@@ -1,14 +1,6 @@
 pipeline {
     agent any
 
-    input {
-        message "What is this release number?"
-        ok "Submit"
-        parameters {
-             string(defaultValue: "${env.BUILD_ID}", name: 'RELEASE_NUMBER', trim: true)
-        }
-    }
-
     stages {
         stage('Build') {            
             steps {
@@ -23,6 +15,14 @@ pipeline {
             }
         }
         stage('Deploy') {
+                input {
+                    message "What is this release number?"
+                    ok "Submit"
+                    parameters {
+                        string(defaultValue: "${env.BUILD_ID}", name: 'RELEASE_NUMBER', trim: true)
+                    }
+                }
+                
             steps {
                 echo 'Building Docker image....'
                 sh "docker build -t homepage:${RELEASE_NUMBER} ."
