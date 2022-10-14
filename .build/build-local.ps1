@@ -6,6 +6,7 @@ try {
     docker docker build -t $containerName
 } catch {
     Write-Error "Error in building docker container"
+    Write-Error $_
     exit
 }
 
@@ -13,5 +14,9 @@ try {
 Write-Host "Launching docker container..."
 try {
     docker run docker run -d --publish 80:3000 $containerName
+} catch {
+    Write-Error "Error in launching docker container"
+    Write-Error $_
+    exit
 }
 
