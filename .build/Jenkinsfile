@@ -7,7 +7,7 @@ pipeline {
                 message "What is this release number?"
                 ok "Submit"
                 parameters {
-                    string(defaultValue: $env.BUILD_ID, name: 'RELEASE_NUMBER', trim: true)
+                    string(defaultValue: $BUILD_ID, name: 'RELEASE_NUMBER', trim: true)
                 }
             }
             
