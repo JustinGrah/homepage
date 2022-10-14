@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Building Docker image....'
-                echo '${env.BUILD_NUMBER}'
+                echo "${env.BUILD_NUMBER}"
             }
         }
     }
