@@ -1,4 +1,37 @@
 extends ./templates/base.pug
 
 block content
-    h1 You can contact me!
+    div(class="container")
+        div(class="row")
+            div(class="col")
+                h1(class="display-4 border-bottom border-primary") Questions? Reach out! 
+                p For everyone that might have questions, comments or other things to say, please do reach out! I'm always happy to get some feedback.
+
+        div(class="row")
+            div(class="col-sm-6")        
+                form(method="post" action="sendMail")
+                    //- Email
+                    div(class="mb-3")
+                        label(for="usremail" class="form-label") Your contact information 
+                        input#usremail(type="email" name="usremail" class="form-control" placeholder="Your Email address")
+
+                    //- First / Lastname
+                    div(class="mb-3 input-group")
+                        input#firstName(type="text" name="firstName" class="form-control" placeholder="Firstname")
+                        input#lastName(type="text" name="lastName" class="form-control" placeholder="Lastname")
+                    
+                    //- Contact reason
+                    div(class="mb-3")
+                        label(for="usrreason" class="form-label") I'm reaching out regarding ... 
+                        select(class="form-select mb-3" aria-label="usrreason")
+                            option(selected) General question / comment
+                            option(value="1") Business inquiry 
+                            option(value="2") Collaboration request
+                            option(value="3") Other
+
+                    div(class="mb-3")
+                        label(for="usrinput" class="form-label") Your message
+                        textarea#usrinput(class="form-control" rows="3")
+
+                    div(class="mb-3")
+                        button(type="submit" class="btn btn-success") Submit
