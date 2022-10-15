@@ -2,4 +2,87 @@ extends ./templates/base.pug
 
 block content
     div(class="container")
-        h1 Very cool sample projects
+        div(class="row")
+            div(class="col")
+                h1(class="display-4 border-bottom border-primary") Discover awesome stuff
+                p 
+                    | Here you can learn about some of my recent projects and work that I've done.
+                    | Although this is not the whole representation of my work (since some of the works are closed source), I do my best to provide a good overview.
+                    | You can use the below link to explore more on my GitHub repo if you want!
+                a(href="https://github.com/JustinGrah" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary") 
+                    i(class="bi-github")
+                    |  Visit GitHub
+        
+        div(class="row")
+            h1(class="display-6 border-bottom border-primary") Project overview
+            div(class="row row-cols-4")
+                //- Project 1
+                div(class="col")
+                    div(class="card")
+                        svg(class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false")
+                            title Placeholder
+                            rect(width="100%" height="100%" fill="#868e96")
+
+                        div(class="card-body")
+                            h5(class="card-title") Pipelines and CI/CD
+
+                            p(class="card-text")
+                                | A simple project to explore Jenkins pipelines CI/CD using docker and container orchestration with Kubernetes.
+                            
+                            a(href="https://github.com/JustinGrah/homepage" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary") 
+                                i(class="bi-github")
+                                |  Visit Project
+
+                //- Project 2
+                div(class="col")
+                    div(class="card")
+                        svg(class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false")
+                            title Placeholder
+                            rect(width="100%" height="100%" fill="#868e96")
+
+                        div(class="card-body")
+                            h5(class="card-title") Summarize SDDC
+
+                            p(class="card-text")
+                                | When dealing with SDDC logs, we want to have a way to compare multiple nodes with each other.
+                                | This tool does the parsing, sorting and generating of a text file which can be used to compare settings across multiple nodes.
+                            
+                            a(href="https://github.com/JustinGrah/Summarize-SDDC" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary") 
+                                i(class="bi-github")
+                                |  Visit Project
+
+                //- Project 3
+                div(class="col")
+                    div(class="card")
+                        svg(class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false")
+                            title Placeholder
+                            rect(width="100%" height="100%" fill="#868e96")
+
+                        div(class="card-body")
+                            h5(class="card-title") Windows Admin Center connections
+
+                            p(class="card-text")
+                                | This tool is designed to export and import connections from all users in the Windows Admin Center.
+                                | That can be useful when migrating DEV instances to PROD or having a replication between two Windows Admin Center instances
+                            
+                            a(href="https://github.com/JustinGrah/WAC-MoveWacDatabase" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary") 
+                                i(class="bi-github")
+                                |  Visit Project
+
+                //- Project 4
+                div(class="col")
+                    div(class="card")
+                        svg(class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false")
+                            title Placeholder
+                            rect(width="100%" height="100%" fill="#868e96")
+
+                        div(class="card-body")
+                            h5(class="card-title") Markdown documentation
+
+                            p(class="card-text")
+                                | To help creating unified internal and customer facing documentation, I've created a sample set of templates.
+                                | The templates are written in Markdown and already contain a lot of features such as: Badges, custom styling etc. 
+                            
+                            a(href="https://github.com/JustinGrah/Docs-Templates" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary") 
+                                i(class="bi-github")
+                                |  Visit Project
