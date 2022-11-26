@@ -2,4 +2,48 @@ extends ./templates/base.pug
 
 block content
     div(class="container")
-        h1 Cool stuff about ...
+        div(class="row")
+            div(class="col")
+                h1(class="display-4 border-bottom border-primary") Information about me 
+                p Here you will find some information about me and my career - if that is something you are interested in.
+
+        div(class="row")
+            div(class="col col-md-8")
+                figure(class="text-center")
+                    blockquote(class="blockquote")
+                        p "So long as you enjoy it, do it mindfully and well, and have an honest purpose behind it, life won’t fail you." 
+                    
+                    figcaption(class="blockquote-footer")
+                        | Satya Nadella #[cite(title="Source Title") CEO Microsoft]
+                p
+                    | The quoute above essentially sums everything up. I personally belive in the fact that each and every person can achive 
+                    | what they truly value in Life. My personal route I took, essentially started with an apprenticeship back in 2016.
+                    | I was very lucky and still grateful for all the experiences I have gathered there. Surely there were up's and downs. However 
+                    | the lessons learned shaped not only me, but also the work I do today and tomorrow. #[br]
+                    | After my apprenticeship, I was lucky enough to land a Job in Big tech. Not only was this a challange in terms of knowledge 
+                    | and career decisions but was also filled with personal challenages. This phase helped me to understand what i truly want to achive 
+                    | which ultimatley lead to switching Jobs to a company where I not only vlaue each and every day, but also truly live the One Microsoft misson.
+                    | I chose to pursue a road that is full of challanges each and every day. Working in Big Tech is not easy, however when you are surrounded by people 
+                    | that you value, enjoy working with and are there to give you a diverse perspective, you not only will grow technically but also personally. #[br]
+                    | To end this, i wanted to share another quoute that i think in todays world full of "success" and "money" gets forgotten:
+                figure(class="text-center")
+                    blockquote(class="blockquote")
+                        p "If we can connect what we stand for as individuals with what this company is capable of, there is very little we can’t accomplish" 
+                    
+                    figcaption(class="blockquote-footer")
+                        | Satya Nadella #[cite(title="Source Title") CEO Microsoft]
+
+            div(class="col col-md-3")
+                div(class="card")
+                        h5(class="card-header")
+                            | My LinkedIn profile
+
+                        div(class="card-body")
+                            h5(class="card-title") Justin Grah
+                        
+                            p(class="card-text")
+                                | Support Escalation engineer @Microsoft
+
+                            a(href="https://www.linkedin.com/in/justin-grah" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary") 
+                                i(class="bi-linkedin")
+                                |  Visit my Linked:In
